@@ -1,0 +1,6 @@
+[console_scripts]
+dirac-version = DIRAC.Core.scripts.dirac_version:main
+
+[dirac]
+metadata = DIRAC:extension_metadata
+

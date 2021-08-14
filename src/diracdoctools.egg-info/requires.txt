@@ -1,0 +1,13 @@
+setuptools
+six
+
+[server]
+GitPython
+importlib_resources
+
+[testing]
+mock
+parameterized
+pytest
+pytest-cov
+pycodestyle

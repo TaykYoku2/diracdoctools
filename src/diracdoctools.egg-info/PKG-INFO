@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: diracdoctools
+Version: 0.1.dev1+g418d341.d20210814
+Summary: Build DIRAC documentation.
+Home-page: https://github.com/TaykYoku/diracdoctools/
+License: GPL-3.0-only
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.8
+Provides-Extra: server
+Provides-Extra: testing
+License-File: LICENSE
+
+How to build DIRAC documentation
+=================================
+
+1. Create DIRAC client environment by an appropriate::
+
+      source bashrc
+
+2. Go to the Documentation directory of the DIRAC source code repository::
+
+      cd DIRAC/docs/
+      export PYTHONPATH=$PWD/diracdoctools:$PYTHONPATH
+
+3. Run the documentation building script
+
+   This also creates all the automatically generated rst files::
+
+      make htmlall
+
+3.1 to run incremental builds after rst files have changed, only run::
+
+      make html
+
+3.2 The automatic creation of the CodeDocumentation, Command References, and example cfg can also be run from the
+    DIRAC/docs folders with::
+
+      diracdoctools/scripts/dirac-docs-build-commands.py
+      diracdoctools/scripts/dirac-docs-build-code.py
+      diracdoctools/scripts/dirac-docs-concatenate-diraccfg.py
+
+
+
